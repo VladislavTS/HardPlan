@@ -39,6 +39,26 @@ if ( file_exists( PATH_FUNCTIONS . "/Log.php" ) ) {
  */
 
 /**
+ * работа с базой данных
+ */
+if ( file_exists( PATH_COMPONENTS . "/DataBase.class.php" ) ) {
+
+	require_once( PATH_COMPONENTS . "/DataBase.class.php" );
+
+	$dataBase_obj = new DataBase();
+	$dataBase_connect = $dataBase_obj->connect( DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE );
+
+	if ( $dataBase_connect == false ) {
+		$logger_core->error( "Не удалось полключиться к базе данных" );
+		exit();
+	}
+
+} else {
+	$logger_core->error( "Не удалось полключить компонент для работы с базой данных (" . PATH_COMPONENTS . "/DataBase.class.php)" );
+	exit();
+}
+
+/**
  * параметры страницы
  */
 if ( file_exists( PATH_COMPONENTS . "/PageParams.class.php" ) ) {

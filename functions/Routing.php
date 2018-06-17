@@ -71,8 +71,8 @@ switch ( $routeInfo[0] )
 			/**
 			 * подключаем контроллер страницы авторизации
 			 */
-			if ( !include_once( PATH_PAGE_CONTROLLERS . "/authorization.php" ) )
-				$logger_route->error( "Контроллер для страницы authorization не найден" );
+			if ( !include_once( PATH_PAGE_CONTROLLERS . "/sign.php" ) )
+				$logger_route->error( "Контроллер для страницы sign не найден" );
 
 		} else {
 

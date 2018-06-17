@@ -24,7 +24,7 @@ class PageParams
 	 *
 	 * @return array
 	 */
-	public function getPageParams ()
+	public function getParams ()
 	{
 
 		return $this->pageParams;
@@ -36,7 +36,7 @@ class PageParams
 	 *
 	 * @return value
 	 */
-	public function getPageParam ( $paramName )
+	public function getParam ( $paramName )
 	{
 
 		if ( $this->pageParams[ $paramName ] ) {
