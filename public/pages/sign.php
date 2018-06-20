@@ -11,7 +11,7 @@ require_once( PATH_PUBLIC_MODULES . "/header/index.php" );
 
 <div class="container__full-page">
 
-	<form name="sign-in" tab="sign-in" class="sign-form active">
+	<form name="sign-in" tab="sign-in" class="ajax sign-form active">
 
 		<p>
 			Пожалуйста, авторизируйтесь для входа в систему<br>
@@ -33,7 +33,7 @@ require_once( PATH_PUBLIC_MODULES . "/header/index.php" );
 
 
 
-	<form name="sign-up" tab="sign-up" class="sign-form">
+	<form name="sign-up" tab="sign-up" class="ajax sign-form">
 
 		<p>
 			Пожалуйста, расскажите немного о себе<br>

@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c598753-fd3d-4a94-bbef-29621c036467" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/modules/footer/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/modules/header/index.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/PageParams.class.php" afterPath="$PROJECT_DIR$/components/PageParams.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs.php" afterPath="$PROJECT_DIR$/configs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/err_core.log" afterPath="$PROJECT_DIR$/log/err_core.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/err_route.log" afterPath="$PROJECT_DIR$/log/err_route.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/success.log" afterPath="$PROJECT_DIR$/log/success.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/modules/header/index.php" afterPath="$PROJECT_DIR$/public/modules/header/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/authorization.php" afterPath="$PROJECT_DIR$/public/pages/authorization.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/front.php" afterPath="$PROJECT_DIR$/public/pages/front.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,29 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="form-ajax.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions/js/form-ajax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
-              <folding>
-                <element signature="e#7#63#0#PHP" expanded="true" />
-                <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-                <marker date="1529227293470" expanded="true" signature="1397:1421" ph=" параметры страницы ..." />
-                <marker date="1529227293470" expanded="true" signature="1489:1550" ph="..." />
-                <marker date="1529227293470" expanded="true" signature="1558:1707" ph="..." />
-                <marker date="1529227293470" expanded="true" signature="1715:1770" ph=" подключаем функционал для работы с маршрутизацией ..." />
-                <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataBase.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="15">
+              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -82,6 +60,7 @@
         <option value="$PROJECT_DIR$/components/Routing.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/components/DataBase.class.php" />
+        <option value="$PROJECT_DIR$/functions/js/form-ajax.js" />
       </list>
     </option>
   </component>
@@ -113,7 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -136,13 +114,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="functions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,18 +256,21 @@
       <workItem from="1528484014031" duration="1396000" />
       <workItem from="1528737144148" duration="4628000" />
       <workItem from="1529143907460" duration="165000" />
-      <workItem from="1529221835367" duration="717000" />
+      <workItem from="1529221835367" duration="1290000" />
+      <workItem from="1529302008075" duration="544000" />
+      <workItem from="1529388042713" duration="959000" />
+      <workItem from="1529473210941" duration="40000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28158000" />
+    <option name="totallyTimeSpent" value="30274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1881259" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19527897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -321,15 +321,71 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#7#63#0#PHP" expanded="true" />
+            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#7#63#0#PHP" expanded="true" />
+            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#7#63#0#PHP" expanded="true" />
+            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
           <folding>
             <element signature="e#7#63#0#PHP" expanded="true" />
             <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1397:1421" ph=" параметры страницы ..." />
-            <marker date="1529227293470" expanded="true" signature="1489:1550" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1558:1707" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1715:1770" ph=" подключаем функционал для работы с маршрутизацией ..." />
             <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
@@ -342,10 +398,6 @@
           <folding>
             <element signature="e#7#63#0#PHP" expanded="true" />
             <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1397:1421" ph=" параметры страницы ..." />
-            <marker date="1529227293470" expanded="true" signature="1489:1550" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1558:1707" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1715:1770" ph=" подключаем функционал для работы с маршрутизацией ..." />
             <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
@@ -365,10 +417,6 @@
           <folding>
             <element signature="e#7#63#0#PHP" expanded="true" />
             <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1397:1421" ph=" параметры страницы ..." />
-            <marker date="1529227293470" expanded="true" signature="1489:1550" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1558:1707" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1715:1770" ph=" подключаем функционал для работы с маршрутизацией ..." />
             <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
@@ -431,26 +479,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/Routing.php" />
     <entry file="file://$PROJECT_DIR$/components/Log.php" />
+    <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+        <state relative-caret-position="555">
+          <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
           <folding>
             <element signature="e#7#63#0#PHP" expanded="true" />
             <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1397:1421" ph=" параметры страницы ..." />
-            <marker date="1529227293470" expanded="true" signature="1489:1550" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1558:1707" ph="..." />
-            <marker date="1529227293470" expanded="true" signature="1715:1770" ph=" подключаем функционал для работы с маршрутизацией ..." />
             <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
+    <entry file="file://$PROJECT_DIR$/functions/js/form-ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
           <folding />
         </state>
       </provider>
