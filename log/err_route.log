@@ -105,3 +105,5 @@
 [2018-06-17 12:31:13] logger_route.ERROR: 404 /favicon.ico [] []
 [2018-06-17 12:31:46] logger_route.ERROR: 404 /favicon.ico [] []
 [2018-06-17 12:37:58] logger_route.ERROR: 404 /favicon.ico [] []
+[2018-06-21 18:42:17] logger_route.ERROR: 404 /var/www/public/functions/js/form-ajax.js [] []
+[2018-06-21 18:42:17] logger_route.ERROR: 404 /favicon.ico [] []

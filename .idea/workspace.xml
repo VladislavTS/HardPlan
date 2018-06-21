@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c598753-fd3d-4a94-bbef-29621c036467" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/modules/footer/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/modules/header/index.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/configs.php" afterPath="$PROJECT_DIR$/configs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/front.php" afterPath="$PROJECT_DIR$/public/pages/front.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/err_route.log" afterPath="$PROJECT_DIR$/log/err_route.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/success.log" afterPath="$PROJECT_DIR$/log/success.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/sign.php" afterPath="$PROJECT_DIR$/public/pages/sign.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/functions/js/form-ajax.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+              <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -138,8 +137,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,18 +258,19 @@
       <workItem from="1529221835367" duration="1290000" />
       <workItem from="1529302008075" duration="544000" />
       <workItem from="1529388042713" duration="959000" />
-      <workItem from="1529473210941" duration="40000" />
+      <workItem from="1529473210941" duration="2397000" />
+      <workItem from="1529567743493" duration="981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30274000" />
+    <option name="totallyTimeSpent" value="33612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="810" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19527897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1981402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -319,22 +319,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/functions/js/form-ajax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
-          <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -344,9 +332,9 @@
         <state relative-caret-position="555">
           <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
           <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+            <element signature="e#7#63#0#PHP" expanded="false" />
+            <marker date="1529603604278" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529603604278" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
       </provider>
@@ -355,7 +343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -364,9 +351,28 @@
         <state relative-caret-position="555">
           <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
           <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+            <element signature="e#7#63#0#PHP" expanded="false" />
+            <marker date="1529603604278" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529603604278" expanded="true" signature="1981:2000" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DataBase.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+          <folding>
+            <element signature="e#7#63#0#PHP" expanded="false" />
+            <marker date="1529603604278" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529603604278" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
       </provider>
@@ -375,7 +381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -384,9 +389,9 @@
         <state relative-caret-position="585">
           <caret line="42" column="3" lean-forward="false" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
           <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+            <element signature="e#7#63#0#PHP" expanded="false" />
+            <marker date="1529603604278" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529603604278" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
       </provider>
@@ -396,9 +401,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+            <element signature="e#7#63#0#PHP" expanded="false" />
+            <marker date="1529603604278" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529603604278" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
       </provider>
@@ -415,9 +420,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+            <element signature="e#7#63#0#PHP" expanded="false" />
+            <marker date="1529603604278" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529603604278" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
       </provider>
@@ -473,7 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -483,7 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -492,9 +495,9 @@
         <state relative-caret-position="555">
           <caret line="40" column="3" lean-forward="false" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
           <folding>
-            <element signature="e#7#63#0#PHP" expanded="true" />
-            <marker date="1529227293470" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
-            <marker date="1529227293470" expanded="true" signature="1981:2000" ph="..." />
+            <element signature="e#7#63#0#PHP" expanded="false" />
+            <marker date="1529603604278" expanded="true" signature="540:555" ph=" подключаем компоненты ..." />
+            <marker date="1529603604278" expanded="true" signature="1981:2000" ph="..." />
           </folding>
         </state>
       </provider>
@@ -502,7 +505,7 @@
     <entry file="file://$PROJECT_DIR$/functions/js/form-ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
           <folding />
         </state>
       </provider>
