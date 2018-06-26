@@ -45,6 +45,10 @@ h6 { font-size: 1.15rem; }
 
 
 
+/**
+ * контейнеры
+ */
+
 .container {
 	width: 100%;
 	max-width: 1200px;
@@ -68,4 +72,31 @@ h6 { font-size: 1.15rem; }
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+
+
+/**
+ * формы
+ */
+
+.form-answer {
+	width: 100%;
+	min-height: 50px;
+
+	margin: 7px 0 5px 0;
+	padding: 15px 25px;
+
+	opacity: 0;
+	transition: 0.15s;
+}
+.form-answer.active {
+	opacity: 1;
+}
+
+.form-answer__success {
+	background: #b3dec1;
+}
+.form-answer__error {
+	background: #F4A698;
 }

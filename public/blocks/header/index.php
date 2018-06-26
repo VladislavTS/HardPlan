@@ -13,7 +13,7 @@
 
 
 	<!-- обработка форм методом ajax -->
-	<script type="text/javascript" src="<?=PATH_FUNCTIONS ?>/js/form-ajax.js"></script>
+	<script type="text/javascript" src="/functions/js/form-ajax.js"></script>
 
 	<!-- подключаем стили текущей станицы -->
 	<?php if ( file_exists( PATH_PUBLIC_STYLES . "/" . $pageParams->getParam( "id" ) . "/style.css" ) ): ?>

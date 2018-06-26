@@ -3,7 +3,7 @@
 /**
  * подключаем верхнюю часть сайта
  */
-require_once( PATH_PUBLIC_MODULES . "/header/index.php" );
+require_once( PATH_PUBLIC_BLOCKS . "/header/index.php" );
 
 ?>
 
@@ -11,17 +11,19 @@ require_once( PATH_PUBLIC_MODULES . "/header/index.php" );
 
 <div class="container__full-page">
 
-	<form name="sign-in" tab="sign-in" class="ajax sign-form active">
+	<form method="post" redirect="" name="sign-in" tab="sign-in" class="ajax sign-form active">
 
 		<p>
 			Пожалуйста, авторизируйтесь для входа в систему<br>
-			<button tab-button="sign-up">Создать новый аккаунт</button>
+			<span tab-button="sign-up">Создать новый аккаунт</span>
 		</p>
 
 		<div class="inputs-block">
 
 			<input type="email" name="email" placeholder="Введите ваш email" required>
 			<input type="password" name="pass" placeholder="Введите ваш пароль" required>
+
+			<div class="form-answer"></div>
 
 			<input type="submit" name="sign-submit" value="Войти">
 
@@ -33,11 +35,11 @@ require_once( PATH_PUBLIC_MODULES . "/header/index.php" );
 
 
 
-	<form name="sign-up" tab="sign-up" class="ajax sign-form">
+	<form method="post" redirect="" name="sign-up" tab="sign-up" class="ajax sign-form">
 
 		<p>
 			Пожалуйста, расскажите немного о себе<br>
-			<button tab-button="sign-in">У меня уже есть аккаунт</button>
+			<span tab-button="sign-in">У меня уже есть аккаунт</span>
 		</p>
 
 		<div class="inputs-block">
@@ -45,6 +47,8 @@ require_once( PATH_PUBLIC_MODULES . "/header/index.php" );
 			<input type="email" name="email" placeholder="Введите ваш email" required>
 			<input type="password" name="pass" placeholder="Введите ваш пароль" required>
 			<input type="password" name="pass_double" placeholder="Подтвердите пароль" required>
+
+			<div class="form-answer"></div>
 
 			<input type="submit" name="sign-submit" value="Зарегистрироваться">
 
@@ -64,6 +68,6 @@ require_once( PATH_PUBLIC_MODULES . "/header/index.php" );
 /**
  * подключаем нижнюю часть сайта
  */
-require_once( PATH_PUBLIC_MODULES . "/footer/index.php" );
+require_once( PATH_PUBLIC_BLOCKS . "/footer/index.php" );
 
 ?>

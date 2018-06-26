@@ -5,11 +5,15 @@
  */
 require_once( PATH_PUBLIC_BLOCKS . "/header/index.php" );
 
+?>
 
 
 
+123
 
 
+
+<?php
 
 /**
  * подключаем нижнюю часть сайта

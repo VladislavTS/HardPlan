@@ -13,6 +13,7 @@ define( "PATH_UPLOADS", PATH_ROOT . "/uploads" );
 
 define( "PATH_PUBLIC", PATH_ROOT . "/public" );
 define( "PATH_PUBLIC_STYLES", PATH_PUBLIC . "/css" );
+define( "PATH_PUBLIC_SCRIPTS", PATH_PUBLIC . "/js" );
 define( "PATH_PUBLIC_INCLUDES", PATH_PUBLIC . "/includes" );
 define( "PATH_PUBLIC_MODULES", PATH_PUBLIC . "/modules" );
 define( "PATH_PUBLIC_BLOCKS", PATH_PUBLIC . "/blocks" );
