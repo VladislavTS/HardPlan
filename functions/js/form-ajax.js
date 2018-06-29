@@ -37,13 +37,13 @@ $( document ).ready( function () {
 
 				/**
 				 * если указано перенаправление - то перенаправляем в указанное место
-				 
+				 */
 				if ( $( $thisForm ).is( "[redirect]" ) ) {
 
 					var redirect = $( $thisForm ).attr( "redirect" );
 					window.location.href = redirect;
 
-				}*/
+				}
 
 			},
 			error: function( xhr )

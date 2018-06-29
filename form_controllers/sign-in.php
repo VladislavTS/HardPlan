@@ -8,21 +8,10 @@ require_once( $_SERVER[ "DOCUMENT_ROOT" ] . "/db_connect.php" );
 
 
 
-$email            = $_POST[ "email" ];
-$password         = $_POST[ "pass" ];
-$password_double  = $_POST[ "pass_double" ];
+$email     = $_POST[ "email" ];
+$password  = $_POST[ "pass" ];
 
 
-
-/**
- * проверяем, совпадают ли пароли
- */
-if ( $password !== $password_double ) {
-
-	header( "HTTP/1.0 401 Unauthorized" );
-	exit( "Пароли не совпадают" );
-
-}
 
 /**
  * проверяем, верно ли указан формат почты
@@ -36,13 +25,13 @@ if ( !filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
 
 
 
-$addUser_status = $dataBase_obj->addUser( $dataBase_connect, $email, $password );
+$signIn_status = $dataBase_obj->signIn( $dataBase_connect, $email, $password );
 if ( $addUser_status !== true ) {
 	header( "HTTP/1.0 500 Internal Server Error" );
-	exit( "Этот email уже используется" );
+	exit( "Не получилось авторизироваться" );
 }
 
 
 
 header( "HTTP/1.0 200 OK" );
-exit( "Вы успешно зарегистрированы" );
+exit( "Вы успешно авторизированы" );

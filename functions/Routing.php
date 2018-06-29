@@ -22,7 +22,7 @@ $uri = rawurldecode( $uri );
 $dispatcher = FastRoute\simpleDispatcher( function( FastRoute\RouteCollector $router )
 {
 
-	$router->addRoute( "GET", "/", "front" );
+	$router->addRoute( "GET", "/", "portfolio" );
 	$router->addRoute( "GET", "/user/{id:\d+}", "get_user_handler" );
 	$router->addRoute( "GET", "/articles/{id:\d+}[/{title}]", "get_article_handler" );
 
@@ -77,10 +77,25 @@ switch ( $routeInfo[0] )
 		} else {
 
 			/**
-			 * подключаем контроллер нужной страницы
+			 * проверяем соответствие ip пользователя
 			 */
-			if ( !include_once( PATH_PAGE_CONTROLLERS . "/${handler}.php" ) )
-				$logger_route->error( "Контроллер для страницы ${handler} не найден" );
+			if ( !$dataBase_obj->verifyUser_ip( $dataBase_connect, $_SESSION["user"] ) ) {
+
+				/**
+				 * подключаем контроллер страницы авторизации
+				 */
+				if ( !include_once( PATH_PAGE_CONTROLLERS . "/sign.php" ) )
+					$logger_route->error( "Контроллер для страницы sign не найден" );
+
+			} else {
+
+				/**
+				 * подключаем контроллер нужной страницы
+				 */
+				if ( !include_once( PATH_PAGE_CONTROLLERS . "/${handler}.php" ) )
+					$logger_route->error( "Контроллер для страницы ${handler} не найден" );
+
+			}
 
 		}
 

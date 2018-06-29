@@ -4,7 +4,7 @@
 
 * {
 	font-family: "Yanone Kaffeesatz", sans-serif;
-	color: #3c4859;
+	color: #212934;
 
 	margin: 0;
 	padding: 0;
@@ -27,7 +27,7 @@ html {
 }
 
 body {
-	background: #f3f5f7;
+	background: #fffcfc;
 }
 
 
@@ -45,18 +45,38 @@ h6 { font-size: 1.15rem; }
 
 
 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	height: 45px;
+
+	font-size: 1.75rem;
+	margin: 5px 0;
+
+	border-bottom: 3px solid #9facbd;
+}
+
+
+
 /**
  * контейнеры
  */
 
 .container {
 	width: 100%;
-	max-width: 1200px;
-
-	margin: 0 auto;
-	padding: 0 25px;
-
 	position: relative;
+}
+
+.container_content {
+	max-width: calc( 100% - 300px );
+	padding: 50px 25px;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+
+	overflow-y: scroll;
 }
 
 .container__flex {
@@ -72,6 +92,37 @@ h6 { font-size: 1.15rem; }
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+
+
+/**
+ * контент-блоки
+ */
+
+.left-menu {
+	width: 300px;
+	height: 100%;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+
+	padding: 50px 25px;
+
+	overflow: hidden;
+	box-shadow: 0 0 10px 0 rgba( 0,0,0, 0.05 );
+	background: #fffcfc;
+}
+.left-menu__level2 {
+	left: -300px;
+	z-index: 1001;
+
+	transition: 0.25s;
+}
+.left-menu__level2.active {
+	left: 0;
 }
 
 
@@ -98,5 +149,5 @@ h6 { font-size: 1.15rem; }
 	background: #b3dec1;
 }
 .form-answer__error {
-	background: #F4A698;
+	background: #f4a698;
 }

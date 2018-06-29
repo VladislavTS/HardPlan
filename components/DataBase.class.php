@@ -31,6 +31,33 @@ class DataBase
 
 
 	/**
+	 * авторизация пользователя
+	 *
+	 * @param object $dataBase_connect  подключение к базе данных
+	 * @param string $email             email пользователя
+	 * @param string $password          пароль пользователя
+	 *
+	 * @return bool
+	 */
+	public function signIn ( $dataBase_connect, $email, $password )
+	{
+
+		$password = md5( $password );
+
+		$request = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+		$query = mysqli_query( $dataBase_connect, $request );
+
+		if ( $query->num_rows < 1 ) return false;
+
+		$_SESSION[ "user" ] = $email;
+
+		return true;
+
+	}
+
+
+
+	/**
 	 * создание нового пользователя
 	 *
 	 * @param object $dataBase_connect  подключение к базе данных
@@ -65,6 +92,28 @@ class DataBase
 			$_SESSION[ "user" ] = $email;
 		}
 
+		return true;
+
+	}
+
+
+
+	/**
+	 * проверить ip указанного пользователя
+	 *
+	 * @param  object $dataBase_connect  подключение к базе данных
+	 * @param  string $email             email пользователя
+	 * @return bool
+	 */
+	public function verifyUser_ip ( $dataBase_connect, $email )
+	{
+
+		$userIP = $_SERVER[ "REMOTE_ADDR" ];
+
+		$request = "SELECT * FROM users WHERE email='$email'";
+		$query = mysqli_query( $dataBase_connect, $request );
+
+		if ( $query->num_rows < 1 ) return false;
 		return true;
 
 	}

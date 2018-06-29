@@ -9,7 +9,13 @@ require_once( PATH_PUBLIC_BLOCKS . "/header/index.php" );
 
 
 
-123
+<div class="container container__flex">
+
+	<div class="left-menu"></div>
+	<!-- left-menu -->
+
+</div>
+<!-- container -->
 
 
 
