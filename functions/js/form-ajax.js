@@ -1,32 +1,29 @@
 $( document ).ready( function () {
 
 	/**
-	 * обработка форм методом ajax
+	 * Обработка форм методом ajax.
 	 */
 	$( "form.ajax" ).on( "submit", function ( e ) {
 
 		e.preventDefault();
 
 
-
-		var $thisForm = $( this );
-		var formName = $( $thisForm ).attr( "name" );
+		var $thisForm     = $( this );
+		var formName      = $( $thisForm ).attr( "name" );
 		var serializeForm = $( $thisForm ).serialize();
 
 		var pathToFormController = "/form_controllers/" + formName + ".php";
 
 
-
 		/**
-		 * формируем и отправляем запрос соответствующему контроллеру
+		 * Формируем и отправляем запрос соответствующему контроллеру.
 		 */
-		$.ajax({
+		$.ajax( {
 
-			type: "POST",
-			url: pathToFormController,
-			data: serializeForm,
-			success: function( data )
-			{
+			type   : "POST",
+			url    : pathToFormController,
+			data   : serializeForm,
+			success: function ( data ) {
 
 				$( $thisForm ).find( ".form-answer" ).text( data );
 
@@ -34,20 +31,18 @@ $( document ).ready( function () {
 				$( $thisForm ).find( ".form-answer" ).addClass( "form-answer__success active" );
 
 
-
 				/**
-				 * если указано перенаправление - то перенаправляем в указанное место
+				 * Если указано перенаправление - то перенаправляем в указанное место.
 				 */
 				if ( $( $thisForm ).is( "[redirect]" ) ) {
 
-					var redirect = $( $thisForm ).attr( "redirect" );
+					var redirect         = $( $thisForm ).attr( "redirect" );
 					window.location.href = redirect;
 
 				}
 
 			},
-			error: function( xhr )
-			{
+			error  : function ( xhr ) {
 
 				$( $thisForm ).find( ".form-answer" ).text( xhr.responseText );
 
@@ -56,12 +51,11 @@ $( document ).ready( function () {
 
 			}
 
-		}); // ajax
-
+		} ); // ajax
 
 
 		/**
-		 * скрываем ответ формы
+		 * Скрываем ответ формы.
 		 */
 		setTimeout( function () {
 			$( $thisForm ).find( ".form-answer" ).removeClass( "active" );

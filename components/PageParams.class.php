@@ -1,68 +1,72 @@
 <?php
 
-/**
- * параметры страницы
- */
-class PageParams
-{
-
-	private $pageParams = array(
-
-		"id"               => "",
-		"title"            => "",
-
-		"metaTitle"        => "",
-		"metaDescription"  => "",
-		"metaKeywords"     => "",
-
-	);
-
-
-
 	/**
-	 * получить параметры страницы
-	 *
-	 * @return array
+	 * Работа с параметрами страницы.
 	 */
-	public function getParams ()
+	class PageParams
 	{
 
-		return $this->pageParams;
+		/**
+		 * Массив с параметрами страницы.
+		 */
+		private $pageParams = array(
 
-	}
+			"id" => "",
+			"title" => "",
 
-	/**
-	 * получить параметр страницы
-	 *
-	 * @return value
-	 */
-	public function getParam ( $paramName )
-	{
+			"metaTitle" => "",
+			"metaDescription" => "",
+			"metaKeywords" => "",
 
-		if ( $this->pageParams[ $paramName ] ) {
-			return $this->pageParams[ $paramName ];
-		} else {
-			return false;
+		);
+
+		/**
+		 * Получить параметры страницы.
+		 *
+		 * @return array
+		 */
+		public function getParams()
+		{
+
+			return $this->pageParams;
+
+		}
+
+		/**
+		 * Получить указанный параметр страницы.
+		 *
+		 * @return value
+		 */
+		public function getParam( $paramName )
+		{
+
+			if ( $this->pageParams[ $paramName ] ) {
+				return $this->pageParams[ $paramName ];
+			}
+			else {
+				return false;
+			}
+
+		}
+
+		/**
+		 * Задать параметр страницы.
+		 *
+		 * @param  string $paramName  Название параметра.
+		 * @param  string $paramValue Значение параметра.
+		 *
+		 * @return bool
+		 */
+		public function setPageParam( $paramName, $paramValue )
+		{
+
+			if ( $this->pageParams[ $paramName ] = $paramValue ) {
+				return true;
+			}
+			else {
+				return false;
+			}
+
 		}
 
 	}
-
-	/**
-	 * указать параметры страницы
-	 *
-	 * @param  string $paramName  название параметра
-	 * @param  string $paramValue значение параметра
-	 * @return bool   успешность операции
-	 */
-	public function setPageParams ( $paramName, $paramValue )
-	{
-
-		if ( $this->pageParams[ $paramName ] = $paramValue ) {
-			return true;
-		} else {
-			return false;
-		}
-
-	}
-
-}

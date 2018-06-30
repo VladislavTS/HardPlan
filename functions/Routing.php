@@ -1,104 +1,131 @@
 <?php
 
-/**
- * получаем запрос
- */
-$httpMethod = $_SERVER["REQUEST_METHOD"];
-$uri = $_SERVER["REQUEST_URI"];
-
-/**
- * обрезаем query запрос и декодируем uri
- */
-if ( false !== $pos = strpos( $uri, "?" ) ) {
-	$uri = substr( $uri, 0, $pos );
-}
-$uri = rawurldecode( $uri );
+	/**
+	 * Проверяем, подключено ли ядро.
+	 */
+	if ( IS_CORE_INC !== true )
+		exit( "silence gold" );
 
 
 
-/**
- * настраиваем диспетчер запросов
- */
-$dispatcher = FastRoute\simpleDispatcher( function( FastRoute\RouteCollector $router )
-{
+	/**
+	 * Получаем запрос.
+	 */
+	$httpMethod = $_SERVER[ "REQUEST_METHOD" ];
+	$uri        = $_SERVER[ "REQUEST_URI" ];
 
-	$router->addRoute( "GET", "/", "portfolio" );
-	$router->addRoute( "GET", "/user/{id:\d+}", "get_user_handler" );
-	$router->addRoute( "GET", "/articles/{id:\d+}[/{title}]", "get_article_handler" );
+	/**
+	 * Обрезаем query запрос и декодируем uri.
+	 */
+	if ( false !== $pos = strpos( $uri, "?" ) ) {
+		$uri = substr( $uri, 0, $pos );
+	}
+	$uri = rawurldecode( $uri );
 
-} );
+
+
+	/**
+	 * Настраиваем диспетчер запросов.
+	 */
+	$dispatcher = FastRoute\simpleDispatcher( function ( FastRoute\RouteCollector $router ) {
+
+		$router->addRoute( "GET", "/", "tasks" );
+		$router->addRoute( "GET", "/user/{id:\d+}", "get_user_handler" );
+		$router->addRoute( "GET", "/articles/{id:\d+}[/{title}]", "get_article_handler" );
+
+	} );
 
 
 
-/**
- * обрабатываем запрос
- */
+	/**
+	 * Обрабатываем запрос.
+	 */
 
-$routeInfo = $dispatcher->dispatch( $httpMethod, $uri );
+	$routeInfo = $dispatcher->dispatch( $httpMethod, $uri );
 
-/**
- * проверяем статус запроса
- */
-switch ( $routeInfo[0] )
-{
-
-	case FastRoute\Dispatcher::NOT_FOUND:
-
-		$logger_route->error( "404 ${uri}" );
-
-		break;
-
-	case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
-
-		$allowedMethods = $routeInfo[1];
-		$logger_route->error( "Метод не поддерживается (${allowedMethods} - $uri)" );
-
-		break;
-
-	case FastRoute\Dispatcher::FOUND:
-
-		$handler = $routeInfo[1];
-		$vars = $routeInfo[2];
-		$logger_succ->info( "$uri" );
-
-		$pageParams = new PageParams();
+	/**
+	 * Проверяем статус запроса.
+	 */
+	switch ( $routeInfo[ 0 ] ) {
 
 		/**
-		 * проверяем, авторизирован ли пользователь
+		 * Если запрашиваемый путь не найден.
 		 */
-		if ( !$_SESSION["user"] ) {
+		case FastRoute\Dispatcher::NOT_FOUND:
+
+			$logger_route->error( "404 ${uri}" );
+
+			break;
+
+		/**
+		 * Если запрашиваемый метод не поддерживается.
+		 */
+		case FastRoute\Dispatcher::METHOD_NOT_ALLOWED:
+
+			$allowedMethods = $routeInfo[ 1 ];
+			$logger_route->error( "Метод не поддерживается (${allowedMethods} - $uri)" );
+
+			break;
+
+		/**
+		 * Если запрашиваемый путь был успешно найден.
+		 */
+		case FastRoute\Dispatcher::FOUND:
+
+			$controllerName     = $routeInfo[ 1 ];
+			$controllerPathName = $routeInfo[ 2 ];
+
+			$logger_succ->info( "$uri" );
+
+			$pageParams = new PageParams();
 
 			/**
-			 * подключаем контроллер страницы авторизации
+			 * Проверяем, авторизирован ли пользователь.
 			 */
-			if ( !include_once( PATH_PAGE_CONTROLLERS . "/sign.php" ) )
-				$logger_route->error( "Контроллер для страницы sign не найден" );
-
-		} else {
-
-			/**
-			 * проверяем соответствие ip пользователя
-			 */
-			if ( !$dataBase_obj->verifyUser_ip( $dataBase_connect, $_SESSION["user"] ) ) {
+			if ( !$_SESSION[ "user" ] ) {
 
 				/**
-				 * подключаем контроллер страницы авторизации
+				 * Подключаем контроллер страницы авторизации.
 				 */
 				if ( !include_once( PATH_PAGE_CONTROLLERS . "/sign.php" ) )
-					$logger_route->error( "Контроллер для страницы sign не найден" );
+					$logger_route->error( "Контроллер для страницы sign не найден", array(
+						"Path to controller" => PATH_PAGE_CONTROLLERS . "/sign.php",
+						"Error path" => __FILE__
+					) );
 
-			} else {
+			}
+			else {
 
 				/**
-				 * подключаем контроллер нужной страницы
+				 * Проверяем соответствие ip пользователя.
 				 */
-				if ( !include_once( PATH_PAGE_CONTROLLERS . "/${handler}.php" ) )
-					$logger_route->error( "Контроллер для страницы ${handler} не найден" );
+				if ( $DB->verifyUser_ip( $DB_connect, $_SESSION[ "user" ] ) !== true ) {
+
+					/**
+					 * Подключаем контроллер страницы авторизации.
+					 */
+					if ( !include_once( PATH_PAGE_CONTROLLERS . "/sign.php" ) )
+						$logger_route->error( "Контроллер для страницы sign не найден", array(
+							"Path to controller" => PATH_PAGE_CONTROLLERS . "/sign.php",
+							"Error path" => __FILE__
+						) );
+
+				}
+				else {
+
+					/**
+					 * Подключаем контроллер нужной страницы.
+					 */
+					if ( !include_once( PATH_PAGE_CONTROLLERS . "/${controllerName}.php" ) )
+						$logger_route->error( "Контроллер для страницы ${controllerName} не найден", array(
+							"Path to controller" => PATH_PAGE_CONTROLLERS . "/${controllerName}.php",
+							"Error path" => __FILE__
+						) );
+
+				}
 
 			}
 
-		}
+			break;
 
-		break;
-
-}
+	}
