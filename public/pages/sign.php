@@ -10,7 +10,7 @@
 
 	<div class="container__full-page">
 
-		<form method="post" redirect="" name="sign-in" tab="sign-in" class="ajax sign-form active">
+		<form method="post" action="/form_controllers/sign-in.php" name="sign-in" tab="sign-in" class="sign-form active">
 
 			<p>
 				Пожалуйста, авторизируйтесь для входа в систему<br>
@@ -33,7 +33,7 @@
 		<!-- form. sign-in -->
 
 
-		<form method="post" redirect="" name="sign-up" tab="sign-up" class="ajax sign-form">
+		<form method="post" action="/form_controllers/sign-up.php" name="sign-up" tab="sign-up" class="sign-form">
 
 			<p>
 				Пожалуйста, расскажите немного о себе<br>

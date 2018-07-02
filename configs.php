@@ -4,10 +4,11 @@
 	 * Пути.
 	 */
 
-	define( "PATH_ROOT", __DIR__ );
+	define( "PATH_ROOT", $_SERVER[ "DOCUMENT_ROOT" ] );
 	define( "PATH_LOGS", PATH_ROOT . "/log" );
 	define( "PATH_FUNCTIONS", PATH_ROOT . "/functions" );
 	define( "PATH_COMPONENTS", PATH_ROOT . "/components" );
+	define( "PATH_FORM_CONTROLLERS", PATH_ROOT . "/form_controllers" );
 	define( "PATH_PAGE_CONTROLLERS", PATH_ROOT . "/page_controllers" );
 	define( "PATH_UPLOADS", PATH_ROOT . "/uploads" );
 

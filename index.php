@@ -3,6 +3,19 @@
 	session_start();
 
 	/**
+	 * Создаем куку при успешной авторизации.
+	 */
+	if ( !$_COOKIE[ "user" ] ) {
+
+		if ( $_SESSION[ "user" ] ) {
+			setcookie( "user", $_SESSION[ "user" ], time() + 60 * 60 * 24 * 30 * 12 );
+		}
+
+	}
+
+
+
+	/**
 	 * Используется для проверки подключения ядра в файлах.
 	 * Пример: if ( IS_CORE_INC !== true ) exit( "silence gold" );
 	 */
@@ -15,9 +28,9 @@
 	 * Пример: exit( ERROR_MESSAGE );
 	 */
 	define( "ERROR_MESSAGE", "
-		<div style='
+		<div style=\"
 			width:100%; height:100%; display:flex; justify-content:center; align-items:center; text-align:center;
-		'>
+		\">
 			На сервисе ведутся технические работы.<br>
 			В скором времени доступ к проекту будет восстановлен.
 		</div>
@@ -107,7 +120,7 @@
 
 		$logger_core->error( "Не удалось полключить компонент для указания параметров страницы", array(
 			"Path to component" => PATH_COMPONENTS . "/PageParams.class.php",
-			"Error path" =>  __FILE__
+			"Error path" => __FILE__
 		) );
 		exit( ERROR_MESSAGE );
 
@@ -127,7 +140,7 @@
 
 		$logger_core->error( "Не удалось полключить функционал для работы с маршрутизацией", array(
 			"Path to component" => PATH_FUNCTIONS . "/Routing.php",
-			"Error path" =>  __FILE__
+			"Error path" => __FILE__
 		) );
 		exit( ERROR_MESSAGE );
 

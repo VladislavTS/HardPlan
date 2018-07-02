@@ -1,14 +1,6 @@
 <?php
 
 	/**
-	 * Проверяем, подключено ли ядро.
-	 */
-	if ( IS_CORE_INC !== true )
-		exit( "silence gold" );
-
-
-
-	/**
 	 * Настраиваем пакет Monolog.
 	 * (логирование)
 	 */
@@ -36,3 +28,9 @@
 	 */
 	$logger_succ = new Logger( "logger_succ" );
 	$logger_succ->pushHandler( new StreamHandler( "log/success.log", Logger::INFO ) );
+
+	/**
+	 * Создаем канал для логов ошибок.
+	 */
+	$logger_error = new Logger( "logger_error" );
+	$logger_error->pushHandler( new StreamHandler( "log/error.log", Logger::WARNING ) );

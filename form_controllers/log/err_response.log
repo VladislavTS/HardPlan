@@ -1,0 +1,4 @@
+[2018-07-01 19:01:17] logger_res.ERROR: Пользователь ввел не верный формат почты. Подозрительно! Не сработала html валидация {"User":"192.168.33.1","Email":null,"Path to component":"/var/www/public/db_connect.php","Error path":"/var/www/public/form_controllers/sign-in.php"} []
+[2018-07-01 19:01:17] logger_res.ERROR: У пользователя не получилось авторизоваться {"User":"192.168.33.1","Email":null} []
+[2018-07-01 19:07:32] logger_res.ERROR: Пользователь ввел не верный формат почты. Подозрительно! Не сработала html валидация {"User":"192.168.33.1","Email":null,"Path to component":"/var/www/public/db_connect.php","Error path":"/var/www/public/form_controllers/sign-in.php"} []
+[2018-07-01 19:07:32] logger_res.ERROR: У пользователя не получилось авторизоваться {"User":"192.168.33.1","Email":null} []
