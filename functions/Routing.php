@@ -29,7 +29,7 @@
 	 */
 	$dispatcher = FastRoute\simpleDispatcher( function ( FastRoute\RouteCollector $router ) {
 
-		$router->addRoute( "GET", "/", "tasks" );
+		$router->addRoute( "GET", "/", "front" );
 		$router->addRoute( "GET", "/user/{id:\d+}", "get_user_handler" );
 		$router->addRoute( "GET", "/articles/{id:\d+}[/{title}]", "get_article_handler" );
 
