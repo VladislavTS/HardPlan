@@ -8,6 +8,8 @@
 	<title><?= $pageParams->getParam( "metaTitle" ); ?></title>
 
 	<link rel="stylesheet" type="text/css" href="/public/css/basic.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/_blocks/router.css">
+
 	<script type="text/javascript" src="/public/libs/jquery.js"></script>
 
 

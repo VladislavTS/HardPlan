@@ -194,4 +194,76 @@
 
 		}
 
+		/**
+		 * Получить имя указанного пользователя.
+		 *
+		 * @param  object $dataBase_connect Подключение к базе данных.
+		 * @param  string $email            Email пользователя.
+		 *
+		 * @return string
+		 */
+		public function getUserName( $dataBase_connect, $email )
+		{
+
+			$request = "SELECT name FROM users WHERE email='$email'";
+			$query   = mysqli_query( $dataBase_connect, $request );
+			$result  = mysqli_fetch_array( $query );
+
+			if ( $query->num_rows < 1 )
+				return false;
+
+			return $result[ 0 ];
+
+		}
+
+		/**
+		 * Получить фамилию указанного пользователя.
+		 *
+		 * @param  object $dataBase_connect Подключение к базе данных.
+		 * @param  string $email            Email пользователя.
+		 *
+		 * @return string
+		 */
+		public function getUserLastName( $dataBase_connect, $email )
+		{
+
+			$request = "SELECT last_name FROM users WHERE email='$email'";
+			$query   = mysqli_query( $dataBase_connect, $request );
+			$result  = mysqli_fetch_array( $query );
+
+			if ( $query->num_rows < 1 )
+				return false;
+
+			return $result[ 0 ];
+
+		}
+
+		/**
+		 * Получить полное имя указанного пользователя.
+		 *
+		 * @param  object $dataBase_connect Подключение к базе данных.
+		 * @param  string $email            Email пользователя.
+		 *
+		 * @return string
+		 */
+		public function getUserFullName( $dataBase_connect, $email )
+		{
+
+			$request = "SELECT name, last_name FROM users WHERE email='$email'";
+			$query   = mysqli_query( $dataBase_connect, $request );
+			$names  = mysqli_fetch_array( $query );
+
+			if ( $query->num_rows < 1 )
+				return false;
+
+			/**
+			 * Получаем имя и фамилию пользователя.
+			 */
+			$result = $names[ "name" ];
+			if ( $names[ "last_name" ] != "" ) $result .= " " . $names[ "last_name" ];
+
+			return $result;
+
+		}
+
 	}

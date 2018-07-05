@@ -65,11 +65,13 @@ input[type="password"] {
 
 .container {
 	width: 100%;
+
+	padding: 0 50px;
 	position: relative;
 }
 
 .container_content {
-	max-width: calc( 100% - 250px );
+	max-width: calc( 100% - 350px );
 	padding: 50px 25px;
 
 	position: fixed;
@@ -102,15 +104,15 @@ input[type="password"] {
  */
 
 .left-menu {
-	width: 250px;
+	width: 350px;
 	height: 100%;
 
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 95;
 
-	padding: 50px 25px;
+	padding: 75px 50px;
 
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -125,6 +127,27 @@ input[type="password"] {
 }
 .left-menu__level2.active {
 	left: 0;
+}
+
+.left-menu .title {
+	margin: 25px 0 15px 0;
+}
+
+.left-menu .personal-list {
+	margin: 15px 0;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.left-menu .person {
+	width: 100%;
+	padding: 7px 25px;
+
+	transition: 0.15s;
+}
+.left-menu .person:hover {
+	background: #9facbd;
 }
 
 

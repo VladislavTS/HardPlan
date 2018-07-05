@@ -13,10 +13,14 @@
 	 */
 
 	$pageParams->setPageParam( "id", "personal" );
-	$pageParams->setPageParam( "title", "Мои коты" );
+	$pageParams->setPageParam( "title", "Сотрудники" );
 
-	$pageParams->setPageParam( "metaTitle", "ХардПлан. Коты" );
-	$pageParams->setPageParam( "metaDescription", "ХардПлан. Сотрудники Хардкода" );
+	$pageParams->setPageParam( "metaTitle", "ХардПлан. Сотрудники" );
+	$pageParams->setPageParam(
+		"metaDescription",
+		"Бесконечно долго можно смотреть на 3 вещи: огонь, воду, и на то как хардкодеры 
+		трудятся в поте лица."
+	);
 	$pageParams->setPageParam( "metaKeywords", "ХардПлан, сотрудники, тех-поддержка" );
 
 
